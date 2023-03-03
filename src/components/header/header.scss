@@ -1,0 +1,24 @@
+.header {
+    background: red;
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        width: 50px;
+        height: auto;
+    }
+
+    &__logo-img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__menu {
+        display: flex;
+        margin-left: auto;
+    }
+
+    &__menu-item {
+        padding: 5px 10px;
+    }
+}

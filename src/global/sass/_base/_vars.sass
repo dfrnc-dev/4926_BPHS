@@ -1,0 +1,94 @@
+
+//----------------------fonts---------------------
+$font1: 'Titillium', sans-serif
+$font2: 'Titillium Text', sans-serif
+
+//---------------------end-fonts---------------------
+
+//----------------------color---------------------
+$accent: #2EBFD8
+$text: #2D2C2C
+$dark: #2F5D9E
+$light: #F5F8FF
+//---------------------end-color---------------------
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-family: $font1
+	font-size: 20px
+	color: $text
+	line-height: 29px
+	font-weight: 400
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	background: $light
+	// justify-content: space-between
+
+	+r(1440)
+		font-size: 20px
+
+	+r(992)
+		font-size: 18px
+
+::selection
+	background-color: $accent
+	color: #fff
+
+::placeholder
+	color: #666
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+	line-height: 1.2
+	margin: 0
+	padding: 0
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+b, strong
+	font-weight: 700
+
+p
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+
+a,
+button
+	+transition
+
+	&:focus,
+	&:hover
+		outline: none
+		text-decoration: none
+		outline: none
+
+input, textarea, select
+	+transition
+	outline: none
+	box-shadow: none
+	border: 1px solid #000
+	// -webkit-appearance: none
+
+	&:focus:required:invalid
+		border-color: red
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: green
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: $text

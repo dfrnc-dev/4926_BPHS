@@ -1,0 +1,78 @@
+//----------------------+r(1200)----------------------
+=r($width)
+	@media only screen and (max-width: $width+ "px")
+		@content
+
+=rmin($width)
+	@media only screen and (min-width: $width+ "px")
+		@content
+
+=rh($height)
+	@media only screen and (max-height: $height + "px")
+		@content
+
+=rhmin($height)
+	@media only screen and (min-height: $height + "px")
+		@content
+
+//----------------------+pseudo----------------------
+%pseudo
+	position: relative
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+
+=pseudo
+	@extend %pseudo
+
+//-------------------background---+cover---------------
+=cover
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+//----------------------+absolute----------------------
+=absolute
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+
+//----------------------+rotate----------------------
+=rotate($var)
+	transform: rotate($var+deg)
+
+//----------------------+scale----------------------
+=scale($var)
+	transform: scale($var)
+
+//----------------------+transition----------------------
+=transition
+	transition: all 0.6s
+	// transition-timing-function: ease-out
+
+//----------------------+between----------------------
+=between
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+
+//----------------------+around----------------------
+=around
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-around
+
+//----------------------+last----------------------
+%last
+	&:last-child
+		margin-bottom: 0
+
+=last
+	@extend %last

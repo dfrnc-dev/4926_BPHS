@@ -1,0 +1,25 @@
+// font-weight helper:
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+		font-display: swap
+
+@include font('Titillium', normal,200, '../fonts/Titillium-Light.woff2')
+@include font('Titillium', normal,400, '../fonts/Titillium-Regular.woff2')
+@include font('Titillium', normal,600, '../fonts/Titillium-Semibold.woff2')
+@include font('Titillium', normal,700, '../fonts/Titillium-Bold.woff2')
+@include font('Titillium', normal,800, '../fonts/Titillium-Black.woff2')
+@include font('Titillium Text', normal,400, '../fonts/TitilliumText22L-400.woff2')
+@include font('Titillium Text', normal,600, '../fonts/TitilliumText22L-600.woff2')
+@include font('Titillium Text', normal,800, '../fonts/TitilliumText22L-800.woff2')

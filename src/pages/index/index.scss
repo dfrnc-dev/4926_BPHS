@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  @media(max-width: 980px) {
+    font-size: 24px;
+  }
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  position: relative;
+  font-size: 50px;
+  transform: translate(10px, 10px);
+
+  @media(max-width: 980px) {
+    font-size: 30px;
+  }
+}

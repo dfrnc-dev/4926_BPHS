@@ -1,0 +1,426 @@
+@import "./_base"
+
+.h2
+	font-size: 63px
+	font-weight: 600
+
+.btn
+	display: flex
+	align-items: center
+	justify-content: center
+	max-width: fit-content
+	height: 60px
+	padding: 5px 40px
+	border-radius: 30px
+	background: $accent
+	font-size: 22px
+	color: #fff
+	font-weight: 700
+
+	&:hover
+		background: $dark
+		color: #fff
+
+// -----CONTAINER-----
+.container
+	max-width: 1420px
+	width: 100%
+	padding: 0 15px
+	margin: 0 auto
+
+	+r(1200)
+		max-width: 1130px
+
+	+r(992)
+		max-width: 768px
+
+	+r(767)
+		max-width: 576px
+
+	+r(576)
+		max-width: 480px
+
+.header
+	padding-top: 80px
+	padding-bottom: 20px
+	z-index: 1000
+	// margin-bottom: 25px
+
+	+r(1440)
+		padding: 15px
+
+	+r(767)
+		margin-bottom: 10px
+
+	&__container
+		display: flex
+		// align-items: center
+		// justify-content: center
+		gap: 50px
+
+		+r(767)
+			max-width: 100%
+			gap: 25px
+
+		+r(576)
+			gap: 15px
+
+		+r(480)
+			flex-direction: column
+			gap: 5px
+
+	&__logo
+		display: block
+		width: 135px
+		height: auto
+
+		+r(480)
+			width: 100px
+
+		img
+			width: 100%
+			height: auto
+
+.hero
+	position: relative
+	padding-top: 20px
+	padding-bottom: 515px
+
+	&__svg
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+		// max-width: 1800px
+
+		svg
+			position: absolute
+			right: 0
+			// object-fit: cover
+			max-width: 1200px
+			width: 60%
+			// height: 100%
+
+	&__title
+		font-size: 83px
+		margin-bottom: 65px
+		font-family: $font1
+		color: #000
+		font-weight: 600
+
+	&__subtitle
+		font-size: 34px
+		margin-bottom: 50px
+
+.second
+	position: relative
+	// padding-top: 180px
+	padding-bottom: 220px
+	background: url(../img/second_bg_1.png) no-repeat
+	background-size: 100%
+
+	&::before
+		content: url(../img/second_detail.png)
+		position: absolute
+		top: -30px
+		right: 47%
+
+	&__svg
+		position: absolute
+		top: 46%
+		left: 45%
+		transform: translate(-50%, -50%)
+		z-index: 1
+		// margin-left: auto
+		// margin-right: auto
+
+	&__container
+		display: flex
+		justify-content: space-between
+		gap: 50px
+		// display: grid
+		// grid-template-columns: 48% 52%
+
+	&__left
+		padding-top: 240px
+		width: 50%
+
+	&__title
+		margin-bottom: 60px
+		position: relative
+		z-index: 2
+
+		&::before
+			content: url(../img/second_title_detail_1.png)
+			position: absolute
+			top: -30px
+			left: -80px
+			z-index: -1
+
+		&::after
+			content: url(../img/second_title_detail_2.png)
+			position: absolute
+			// top: -30px
+			bottom: 40px
+			right: 325px
+			z-index: -1
+
+		span
+			display: flex
+			align-items: center
+			justify-content: center
+			max-width: fit-content
+			background: $dark
+			color: #fff
+			padding: 5px
+			margin-bottom: 2px
+
+	&__subtitle
+		color: #fff
+		max-width: 360px
+		font-size: 30px
+		line-height: 36px
+
+	&__right
+		position: relative
+		padding-top: 180px
+		display: flex
+		align-items: flex-end
+		flex-direction: column
+		justify-content: center
+
+		&::before
+			content: url(../img/second_wave.png)
+			position: absolute
+			left: -75px
+
+		p
+			font-size: 22px
+			margin-bottom: 40px
+			max-width: 430px
+
+.third
+	position: relative
+	padding-bottom: 150px
+
+	&__svg
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+		// max-width: 1800px
+
+		svg
+			position: absolute
+			bottom: 0
+			left: 0
+			// object-fit: cover
+			max-width: 950px
+			width: 60%
+			// height: 100%
+
+	&__container
+		display: grid
+		grid-template-columns: 1fr 1fr
+
+	&__left
+		display: flex
+		align-items: flex-start
+		padding-left: 45px
+		padding-top: 100px
+
+	&__title
+		font-size: 85px
+		line-height: 85px
+		font-weight: 600
+		text-align: right
+
+	&__right
+		padding-left: 135px
+		display: flex
+		flex-direction: column
+		gap: 95px
+
+	&__text
+		max-width: 395px
+
+		&:nth-of-type(1)
+			opacity: 0.2
+
+		&:nth-of-type(3)
+			opacity: 0.2
+
+		h3
+			font-size: 32px
+			font-weight: 600
+			margin-bottom: 25px
+
+		p
+			font-weight: 600
+
+.sixth
+	padding-top: 125px
+	padding-bottom: 530px
+	background: linear-gradient(180deg, rgba(245,248,255,1) 0%, rgba(190,234,249,1) 100%)
+	position: relative
+
+	&__bigSvg
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		margin: 0 auto
+		max-width: 700px
+
+	&__container
+		display: flex
+		justify-content: space-between
+		gap: 50px
+
+	&__svg
+		margin-right: 15%
+
+	&__content
+		max-width: 515px
+		margin-left: 220px
+
+	&__title
+		margin-bottom: 50px
+
+	&__contacts
+		font-size: 21px
+		margin-bottom: 60px
+
+		a
+			font-weight: 700
+
+		&_email
+			color: #62d1fc
+
+		&_tel
+			color: $text
+
+	&__order
+		margin-bottom: 75px
+		display: flex
+		align-items: center
+		gap: 30px
+		max-width: 480px
+		margin-left: auto
+		position: relative
+
+		&::before
+			content: url(../img/sixth_wave.png)
+			position: absolute
+			left: -40px
+
+		p
+			color: $accent
+			font-weight: 700
+
+	&__btn
+		display: flex
+		align-items: center
+		gap: 10px
+
+	&__text
+		font-size: 16px
+		line-height: 24px
+		font-weight: 600
+		color: $accent
+
+.footer
+	padding: 60px 0
+
+	&__container
+		max-width: 900px
+		display: flex
+		justify-content: space-between
+
+	&__logo
+		display: block
+		width: 135px
+		height: auto
+		margin-bottom: 25px
+
+	&__copyright
+		margin-bottom: 5px
+		color: #97C5D4
+
+	&__links
+		display: flex
+		gap: 20px
+
+		a
+			color: #62D1FC
+			font-weight: 700
+			position: relative
+
+			&::after
+				content: ''
+				position: absolute
+				top: calc(50% - 7px)
+				right: -10px
+				width: 1px
+				height: 15px
+				background: #ACD1DE
+
+			&:hover
+				color: $dark
+
+			&:last-of-type
+
+				&::after
+					display: none
+
+	&__right
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-end
+
+	&__social
+		margin-bottom: 25px
+
+	&__tel
+		color: #97c5d4
+		font-size: 18px
+		margin-bottom: 10px
+
+		a
+			color: #538899
+			font-weight: 700
+			margin-left: 5px
+
+			&:hover
+				color: $dark
+
+	&__address
+		display: flex
+		gap: 20px
+
+		a
+			color: #62D1FC
+			font-weight: 700
+			position: relative
+
+			&::after
+				content: ''
+				position: absolute
+				top: calc(50% - 7px)
+				right: -10px
+				width: 1px
+				height: 15px
+				background: #ACD1DE
+
+			&:hover
+				color: $dark
+
+			&:last-of-type
+
+				&::after
+					display: none
