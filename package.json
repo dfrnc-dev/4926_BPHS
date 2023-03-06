@@ -36,7 +36,6 @@
     "html-webpack-plugin": "^5.5.0",
     "loader-utils": "^3.2.0",
     "mini-css-extract-plugin": "^2.5.3",
-    "node-sass": "^7.0.1",
     "path": "^0.12.7",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.2.1",
@@ -51,5 +50,8 @@
     "webpack-dev-server": "^4.7.4",
     "webpack-hot-middleware": "^2.25.1",
     "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.58.3"
   }
 }
